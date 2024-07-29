@@ -1,0 +1,49 @@
+POST http://localhost:8000/auth/register/
+Content-Type: application/json
+
+{
+	"firstName":"shoe",
+	"lastName":"lace",
+	"email":"lace@gmail.com",
+	"gender":"male",
+	"phoneNumber":"034544545",
+	"password":"password"
+}  
+
+###
+POST http://localhost:8000/auth/login/
+Content-Type: application/json
+
+{
+	"email":"lace@gmail.com",
+	"password":"password"
+}  
+
+
+###
+POST http://localhost:8000/auth/logout/
+Content-Type: application/json
+Authorization: Token 4a59ec784aacf14d118c7d9920082e9517835213
+
+{
+	
+}  
+
+
+###
+GET http://localhost:8000/product/getCars/
+Content-Type: application/json
+Authorization: Token 44073dce534a2b8ad06f719e565be6c47b5ba62e
+
+
+###
+POST http://localhost:8000/product/addCar/
+Content-Type: application/json
+Authorization: Token 44073dce534a2b8ad06f719e565be6c47b5ba62e
+
+{
+	"model":"Camry",
+	"brand":"Toyota",
+	"year":"2010",
+	"color":"pink"
+}
